@@ -18,7 +18,7 @@ Um dos poucos momentos que a população jaboatonense é informada sobre ações
 
 
 
-<img src=".\images\materia-g1-aumento-salarios.png" alt="Matéria do G1 sobre aumento de salario de vereadores" width=800 height=520>
+<img src=".\images\materia-g1-aumento-salarios.png" alt="Matéria do G1 sobre aumento de salario de vereadores">
 
 
 
