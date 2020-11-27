@@ -2,7 +2,7 @@
 
 ## Resumo da Proposta
 
-> *Este projeto refere-se a uma API de vereadores municipais da cidade de Jaboatão dos Guararapes, centralizando e facilitando o acesso de informações relevantes sobre cada integrante do poder legislativo eleito em 2020 como raça, gênero, salários, coligações, redes sociais, partido, grau de instrução e gastos de campanha*.
+> *Este projeto refere-se a uma API de vereadores municipais da cidade de Jaboatão dos Guararapes, centralizando e facilitando o acesso a informações relevantes sobre cada integrante do poder legislativo eleito em 2020 como raça, gênero, salários, coligações, redes sociais, partido, grau de instrução e gastos de campanha*.
 
 <img src=".\images\povo-levando-politico.jpeg" alt="Ilustração. Um grupo de pessoas arrasta com esforço um bloco pesado onde um homem de sapato e roupa social, sugestionando um político, está de pé. A ilustração mostra apenas os pés e parte da perna deste homem.">
 
