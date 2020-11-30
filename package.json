@@ -1,0 +1,32 @@
+{
+  "name": "vereadores-e-ideias",
+  "version": "1.0.0",
+  "description": "API que reúne informações dos vereadores da cidade de Jaboatão e abre espaço para interessados em dar alguma ideia de projeto de lei.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marianavns/api-rest-vereadores-jaboatao.git"
+  },
+  "keywords": [
+    "vereadores",
+    "jaboatão",
+    "api",
+    "política"
+  ],
+  "author": "marianavns",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marianavns/api-rest-vereadores-jaboatao/issues"
+  },
+  "homepage": "https://github.com/marianavns/api-rest-vereadores-jaboatao#readme",
+  "dependencies": {
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.17",
+    "nodemon": "^2.0.6"
+  }
+}
