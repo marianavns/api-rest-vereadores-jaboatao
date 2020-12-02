@@ -7,11 +7,10 @@ const controller = require('../controller/councilorsController')
 router.post('/', controller.create)
 router.get('/', controller.readBySearch)
 router.get('/', controller.readAll)
-router.get('/:campaignName', controller.readByName)
+router.get('/:firstName', controller.readByName)
+router.patch('/:firstName', controller.updateItemsByName)
 
 
 // router.delete('', controller.delete)
-// router.delete('/', controller.delete)
-// router.put('/:id', controller.update)
 
 module.exports = router
