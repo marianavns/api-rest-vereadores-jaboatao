@@ -9,8 +9,6 @@ router.get('/', controller.readBySearch)
 router.get('/', controller.readAll)
 router.get('/:firstName', controller.readByName)
 router.patch('/:firstName', controller.updateItemsByName)
-
-
-// router.delete('', controller.delete)
+router.delete('/:_id', controller.deleteByDocID)
 
 module.exports = router
