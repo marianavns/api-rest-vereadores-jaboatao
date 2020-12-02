@@ -32,7 +32,7 @@ app.use(function (req, res, next) {
     next()
   })
 
-// app.use('/', index)
+app.use('/', index)
 app.use('/vereadores', councilors)
 // app.use('/ideias', ideas)
 
