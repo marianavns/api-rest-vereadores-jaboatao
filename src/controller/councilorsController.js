@@ -24,8 +24,8 @@ const readAll = (req, res) => {
 }
 
 const readByName = (req, res) => {
-    const name = req.params.campaignName
-    councilors.find({ campaignName : name }, function (err, result) {
+    const name = req.params.firstName
+    councilors.find({ firstName : name }, function (err, result) {
         if (err) {
             res.status(500).send({ message: err.message })
         } else {
@@ -44,11 +44,24 @@ const readBySearch = (req, res) => {
         }
     })
 }
+
+const updateItemsByName = (req, res) => {
+    const firstName = req.params.firstName
+    const updateEntry = req.body
+    councilors.updateMany({ firstName }, { $set : updateEntry }, { upsert : true }, function(err){
+        if (err) {
+            res.status(500).send({ message: err.message })
+        } else {
+            res.status(200).send({ message : `Attributes: [${Object.keys(updateEntry)}] have been updated successfully.`})
+        }
+    })
+}
    
 
 module.exports = {
     create,
     readAll,
     readByName,
-    readBySearch
+    readBySearch,
+    updateItemsByName
 }
