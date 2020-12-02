@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
 const councilorsSchema = new mongoose.Schema({
+    firstName: String,
     campaignName: String,
     fullName: String,
     neighborhoodsIdentity: Array,
