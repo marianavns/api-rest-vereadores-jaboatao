@@ -3,8 +3,9 @@ const router = express.Router()
 
 router.get('/', function (req, res) {
   res.status(200).send({
-    title: "Central dos Vereadores de Jaboatão",
-    version: "1.0.0"
+    title: "Central de Vereadores",
+    version: "1.0.0",
+    owner: "github.com/marianavns"
   })
 })
 
