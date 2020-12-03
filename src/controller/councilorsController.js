@@ -3,15 +3,28 @@ const councilors = require( '../model/councilors.js' )
 const fs = require('fs')
 
 const create = (req, res) => {
+
+    criticalData1 = req.body.firstName
+    criticalData2 = req.body.inActivity
+
+    if (criticalData1 == undefined || criticalData2 == undefined ) {
+        return res.status(200).send({ err : `knowing councilor's first name and whether he is active is critical. please enter both information correctly.`})
+    }
+
+    if (criticalData1.length <= 2) {
+        return res.status(200).send({ err : `added councilor name has less than three letters. please check this information.`})
+    }
+
     let councilor = new councilors(req.body)
     councilor.save(function(err){
         if (err) {
             res.status(500).send({ message: err.message })
         } else {
-            res.status(201).send({ message : "registro adicionado com sucesso."})
+            res.status(201).send({ message : `councilor [${criticalData1}] was added successfully.`})
         }
     })
 }
+
 
 const readAll = (req, res) => {
     councilors.find(function (err, results) {
@@ -28,7 +41,7 @@ const readBills = (req, res) => {
         { 
             inActivity : true 
         }, 
-        '-_id campaignName fullName mandateRemuneration lastCampaignExpenses campaignExpensesLink', 
+        '-_id firstName campaignName fullName mandateRemuneration lastCampaignExpenses campaignExpensesLink', 
         function (err, results) {
             if (err) {
                 res.status(500).send({ message: err.message })
