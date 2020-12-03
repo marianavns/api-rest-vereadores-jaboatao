@@ -5,7 +5,7 @@ const councilorsSchema = new mongoose.Schema({
     campaignName: String,
     fullName: String,
     neighborhoodsIdentity: Array,
-    focusedActionScope: Array,
+    scope: Array,
     yearOfBirth: Number,
     genre: String,
     skinColor: String,

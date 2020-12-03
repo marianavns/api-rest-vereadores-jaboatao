@@ -23,9 +23,24 @@ const readAll = (req, res) => {
     })
 }
 
+const readBills = (req, res) => {
+    councilors.find(
+        { 
+            inActivity : true 
+        }, 
+        '-_id campaignName fullName mandateRemuneration lastCampaignExpenses campaignExpensesLink', 
+        function (err, results) {
+            if (err) {
+                res.status(500).send({ message: err.message })
+            } else {
+                res.status(200).send(results)
+            }
+        }
+    )
+}
+
 const readByName = (req, res) => {
-    const name = req.params.firstName
-    councilors.find({ firstName : name }, function (err, result) {
+    councilors.find({ firstName }, function (err, result) {
         if (err) {
             res.status(500).send({ message: err.message })
         } else {
@@ -71,6 +86,7 @@ const deleteByDocID = (req, res) => {
 module.exports = {
     create,
     readAll,
+    readBills,
     readByName,
     readBySearch,
     updateItemsByName,

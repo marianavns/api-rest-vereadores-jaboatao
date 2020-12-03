@@ -6,6 +6,7 @@ const controller = require('../controller/councilorsController')
 
 router.post('/', controller.create)
 router.get('/', controller.readBySearch)
+router.get('/contas', controller.readBills)
 router.get('/', controller.readAll)
 router.get('/:firstName', controller.readByName)
 router.patch('/:firstName', controller.updateItemsByName)
