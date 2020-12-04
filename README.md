@@ -2,6 +2,78 @@
 
 # Central de Vereadores
 
+A API Central de vereadores tem a proposta de centralizar as informações sobre os vereadores eleitos na cidade de Jaboatão dos Guararapes em 2020 e permitir que cidadãos enviem ideias de melhorias para a cidade. Para ler a proposta completa, clique [aqui](Proposta-Completa-do-Projeto).
+
+## Sumário
+
+1. [Instruções Para o Uso da API](#Instruções-para-o-uso-da-API)
+2. [Tecnologias empregadas no projeto](#Tecnologias-empregadas-no-projeto)
+3. [Funções da API definidas nas rotas](#Funções-da-API-definidas-nas-rotas)
+   - [Manipulando os registros de vereadores](#Manipulando-os-registros-de-vereadores)
+   - [Manipulando os registros de ideias](#Manipulando-os-registros-de-ideias)
+   - [Não relacionadas às funções de CRUD](#Não-relacionadas-às-funções-de-CRUD)
+4. [Proposta Completa do Projeto](#Proposta-Completa-do-Projeto)
+
+## Instruções para a uso da API
+
+|                Como você quer usar esta API?                 |
+| :----------------------------------------------------------: |
+| <img src="\images\papaleguas.gif" alt="Matéria do G1 sobre aumento de 26% do salario de vereadores da cidade de jaboatão em 25 de setembro de 2019" width=25% align=left>**"Só quero ver a API funcionando..."**. <br />Abra o aplicativo [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=pt-BR) e teste as rotas que estão AQUI usando este endereço na URL do Postman: <br />https://centraldevereadores.herokuapp.com/ na URL do POSTMAN. <br /><br />*Ps.: Está tudo bem alterar o banco de dados por enquanto, temos um reserva!* |
+| <img src="\images\tyra-typing.gif" alt="Matéria do G1 sobre aumento de 26% do salario de vereadores da cidade de jaboatão em 25 de setembro de 2019" width=25% align=left>**"Quero ver como o código foi feito, criar meu próprio banco de dados, explorar e alterar!"**<br />- Tenha instalados os programas [Node.js](https://nodejs.org/en/download/) e [MongoDB](https://www.mongodb.com/try/download/community), além de um editor de códigos; <br />- Escolha uma pasta na sua máquina e clone o projeto: `git clone https://github.com/marianavns/projeto-final-central-de-vereadores`<br />- Dentro da pasta do projeto, digite `npm install` no cmd;<br />- Renomeie o arquivo `.env.exemple` para `.env` e insira as variáveis de ambiente pedidas. |
+
+
+
+## Tecnologias empregadas no projeto
+
+### Para construção da API
+
+- **Node.js**, versão 12.18.3;
+- Gerenciador de pacotes node **npm**, versão 6.14.6;
+- As dependências node:
+  - **Express** versão 4.17.1;
+  - **Mongoose** versão 5.10.17;
+  - **Dotenv-safe** 8.2.0;
+
+- Banco de dados NoSQL **MongoDB**;
+- Editor de códigos VSCode.
+
+### Para uso depois da construção
+
+- **Postman**: para teste das funcionalidades (rotas) da API;
+
+- **Heroku.com**: *deploy* da aplicação na web;
+- **MongoDB Atlas**: hospedagem do banco de dados na nuvem.
+
+## Funções da API definidas nas rotas
+
+### Manipulando os registros de vereadores
+
+| Descrição                                                  | Método | Rota                   |
+| ---------------------------------------------------------- | ------ | ---------------------- |
+| Adiciona um novo vereador                                  | POST   | /vereadores            |
+| Visualiza todos os registros                               | GET    | /vereadores            |
+| Visualiza os nomes e contas dos vereadores                 | GET    | /vereadores/contas     |
+| Pesquisa o vereador pelo nome de campanha                  | GET    | /vereadores/?firstName |
+| Adiciona ou atualiza atributos de um vereador              | PATCH  | /vereadores/:firstName |
+| Exclui registro pelo número do documento no banco de dados | DELETE | /vereadores/:_id       |
+
+### Manipulando os registros de ideias
+
+| Descrição                                    | Método | Rota            |
+| -------------------------------------------- | ------ | --------------- |
+| Adicionar uma nova ideia                     | POST   | /ideias         |
+| Visualizar todas as ideias apresentadas      | GET    | /ideias         |
+| Visualiza as ideias e bairros de onde vieram | GET    | /ideias/bairros |
+| Atualiza uma ideia pelo e-mail cadastrado    | PATCH  | /ideias         |
+
+### Não relacionadas às funções de CRUD
+
+| Descrição                | Método | Rota   |
+| ------------------------ | ------ | ------ |
+| Cria um token para login | GET    | /login |
+
+## Proposta Completa do Projeto
+
 Com o fim das eleições de 2020, conhecemos o grupo de vereadores que ocupará a Câmara Municipal das nossas cidades pelos próximos 4 anos. Mas a pergunta é: será que conhecemos mesmo?
 
 Alguns destes representantes municipais são conhecidos apenas nos bairros que são sua base eleitoral, sendo quase anônimos para o resto da cidade. Com isso, temos dois problemas: **a falta de dados relevantes, centralizados e honestos sobre todos os eleitos** e, como consequência, **é mais difícil sugerir ideias para tornar melhor a vida das cidades**.
@@ -36,55 +108,9 @@ Dentre muitas outras funções, a tecnologia tem a capacidade de disponibilizar 
 
 Jaboatão já conhece, e muito bem, as mazelas que vive ano após ano. A intenção desta API é que a cidade conheça melhor alguns dos responsáveis diretos com o poder de fazer esta triste realidade finalmente mudar.
 
-## Tecnologias
-
-A API Central de Vereadores foi construída usando:
-
-- **Node.js**, versão 12.18.3;
-- Gerenciador de pacotes node **npm**, versão 6.14.6;
-- As dependências node:
-  - **Express** versão 4.17.1;
-  - **Mongoose** versão 5.10.17;
-  - **Dotenv-safe** 8.2.0;
-
-Para o uso da API, como adicionar, editar e deletar registros, usamos a ferramenta:
-
-- **Postman**.
-
-Para criação, manipulação e hospedagem do banco de dados:
-
-- Banco de dados NoSQL **MongoDB**;
-- Serviço de banco de dados na nuvem **MongoDB Atlas**;
-
-Para o *deploy* da aplicação, hospedagem gratuita em:
-
-- **Heroku.com**.
-
-## Instruções para a utilização da API
-
-## Rotas
-
-### Rotas para a entidade vereadores
-
-| Descrição                         | Método | Rota        |
-| --------------------------------- | ------ | ----------- |
-| Cria um novo registro de vereador | POST   |             |
-|                                   |        |             |
-| Visualiza todos os documentos     | GET    | /vereadores |
-|                                   |        |             |
-|                                   |        |             |
-|                                   |        |             |
-|                                   |        |             |
 
 
-
-## Aprendizados
-
-
-
-
-
- Instagram do projeto:
+Instagram do projeto:
 
  <a href="https://instagram.com/vereadoresdejaboatao" target="blank">
     <img src=".\images\icon-instagram.png" alt="ícone do instagram" height="50" width="50" />
