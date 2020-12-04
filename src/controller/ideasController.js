@@ -39,15 +39,15 @@ const readAll = (request, response) => {
     })
 }
 
-const readNeighborhoodIdeas = (req, res) => {
+const readNeighborhoodIdeas = (request, response) => {
     ideas.find(
         {}, 
         '-_id neighborhood scope idea age', 
         function (err, results) {
             if (err) {
-                res.status(500).send({ message: err.message })
+                response.status(500).send({ message: err.message })
             } else {
-                res.status(200).send(results)
+                response.status(200).send(results)
             }
         }
     )
