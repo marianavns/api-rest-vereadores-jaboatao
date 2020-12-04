@@ -2,11 +2,11 @@
 
 # Central de Vereadores
 
-A API Central de vereadores tem a proposta de centralizar as informações sobre os vereadores eleitos na cidade de Jaboatão dos Guararapes em 2020 e permitir que cidadãos enviem ideias de melhorias para a cidade. Para ler a proposta completa, clique [aqui](Proposta-Completa-do-Projeto).
+A API Central de vereadores tem a proposta de centralizar as informações sobre os vereadores eleitos na cidade de Jaboatão dos Guararapes em 2020 e permitir que cidadãos enviem ideias de melhorias para a cidade. Para ler a proposta completa, clique [aqui](#Proposta-Completa-do-Projeto).
 
 ## Sumário
 
-1. [Instruções Para o Uso da API](#Instruções-para-o-uso-da-API)
+1. [Instruções para o uso da API](#Instruções-para-o-uso-da-API)
 2. [Tecnologias empregadas no projeto](#Tecnologias-empregadas-no-projeto)
 3. [Funções da API definidas nas rotas](#Funções-da-API-definidas-nas-rotas)
    - [Manipulando os registros de vereadores](#Manipulando-os-registros-de-vereadores)
@@ -14,12 +14,12 @@ A API Central de vereadores tem a proposta de centralizar as informações sobre
    - [Não relacionadas às funções de CRUD](#Não-relacionadas-às-funções-de-CRUD)
 4. [Proposta Completa do Projeto](#Proposta-Completa-do-Projeto)
 
-## Instruções para a uso da API
+## Instruções para o uso da API
 
 |                Como você quer usar esta API?                 |
 | :----------------------------------------------------------: |
-| <img src="\images\papaleguas.gif" alt="Matéria do G1 sobre aumento de 26% do salario de vereadores da cidade de jaboatão em 25 de setembro de 2019" width=25% align=left>**"Só quero ver a API funcionando..."**. <br />Abra o aplicativo [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=pt-BR) e teste as rotas que estão AQUI usando este endereço na URL do Postman: <br />https://centraldevereadores.herokuapp.com/ na URL do POSTMAN. <br /><br />*Ps.: Está tudo bem alterar o banco de dados por enquanto, temos um reserva!* |
-| <img src="\images\tyra-typing.gif" alt="Matéria do G1 sobre aumento de 26% do salario de vereadores da cidade de jaboatão em 25 de setembro de 2019" width=25% align=left>**"Quero ver como o código foi feito, criar meu próprio banco de dados, explorar e alterar!"**<br />- Tenha instalados os programas [Node.js](https://nodejs.org/en/download/) e [MongoDB](https://www.mongodb.com/try/download/community), além de um editor de códigos; <br />- Escolha uma pasta na sua máquina e clone o projeto: `git clone https://github.com/marianavns/projeto-final-central-de-vereadores`<br />- Dentro da pasta do projeto, digite `npm install` no cmd;<br />- Renomeie o arquivo `.env.exemple` para `.env` e insira as variáveis de ambiente pedidas. |
+| <img src=".\images\papaleguas.gif" alt="Gif do personagem Papa-Léguas correndo para a direita." width=25% align=left>**"Só quero ver a API funcionando..."**. <br />Abra o aplicativo [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=pt-BR) e teste as rotas que estão AQUI usando este endereço na URL do Postman: <br />https://centraldevereadores.herokuapp.com/ na URL do POSTMAN. <br /><br />*Ps.: Está tudo bem alterar o banco de dados por enquanto, temos um reserva!* |
+| <img src=".\images\tyra-typing.gif" alt="Mulher digitando na frente de um computador." width=25% align=left>**"Quero ver como o código foi feito, criar meu próprio banco de dados, explorar e alterar!"**<br />- Tenha instalados os programas [Node.js](https://nodejs.org/en/download/) e [MongoDB](https://www.mongodb.com/try/download/community), além de um editor de códigos; <br />- Escolha uma pasta na sua máquina e clone o projeto: `git clone https://github.com/marianavns/projeto-final-central-de-vereadores`<br />- Dentro da pasta do projeto, digite `npm install` no cmd;<br />- Renomeie o arquivo `.env.exemple` para `.env` e insira as variáveis de ambiente pedidas. |
 
 
 
