@@ -34,6 +34,6 @@ app.use(function (req, res, next) {
 
 app.use('/', index)
 app.use('/vereadores', councilors)
-// app.use('/ideias', ideas)
+app.use('/ideias', ideas)
 
 module.exports = app
