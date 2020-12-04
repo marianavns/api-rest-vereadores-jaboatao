@@ -6,5 +6,6 @@ const controller = require('../controller/ideasController')
 
 router.post('/', controller.create)
 router.get('/', controller.readAll)
+router.get('/vozdosbairros', controller.readNeighborhoodIdeas)
 
 module.exports = router
