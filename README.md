@@ -59,12 +59,12 @@ A API Central de vereadores tem a proposta de centralizar as informações sobre
 
 ### Manipulando os registros de ideias
 
-| Descrição                                    | Método | Rota            |
-| -------------------------------------------- | ------ | --------------- |
-| Adicionar uma nova ideia                     | POST   | /ideias         |
-| Visualizar todas as ideias apresentadas      | GET    | /ideias         |
-| Visualiza as ideias e bairros de onde vieram | GET    | /ideias/bairros |
-| Atualiza uma ideia pelo e-mail cadastrado    | PATCH  | /ideias         |
+| Descrição                                    | Método | Rota                  |
+| -------------------------------------------- | ------ | --------------------- |
+| Adicionar uma nova ideia                     | POST   | /ideias               |
+| Visualizar todas as ideias apresentadas      | GET    | /ideias               |
+| Visualiza as ideias e bairros de onde vieram | GET    | /ideias/vozdosbairros |
+| Atualiza uma ideia pelo e-mail cadastrado    | PATCH  | /ideias               |
 
 ### Não relacionadas às funções de CRUD
 
