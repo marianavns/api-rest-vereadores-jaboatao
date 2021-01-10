@@ -1,7 +1,8 @@
 /node_modules
-/projeto-final-vereadores
+.env
+
 link-do-banco-na-nuvem.txt
 /archives-to-database
-.env
+
 
 
