@@ -4,17 +4,6 @@ const fs = require('fs')
 
 const create = (req, res) => {
 
-    criticalData1 = req.body.firstName
-    criticalData2 = req.body.inActivity
-
-    if (criticalData1 == undefined || criticalData2 == undefined ) {
-        return res.status(200).send({ err : `knowing councilor's first name and whether he is active is critical. please enter both information correctly.`})
-    }
-
-    if (criticalData1.length <= 2) {
-        return res.status(200).send({ err : `added councilor name has less than three letters. please check this information.`})
-    }
-
     let councilor = new councilors(req.body)
     councilor.save(function(err){
         if (err) {
