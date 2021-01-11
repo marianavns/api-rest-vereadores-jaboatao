@@ -1,29 +1,41 @@
 const mongoose = require('mongoose')
 
 const councilorsSchema = new mongoose.Schema({
-    firstName: String,
-    campaignName: String,
+    // Personal Datas
+    campaignName: { type: String, required: [true, 'adicione o nome de campanha'] },
+    firstName: { type: String, required: [true, 'adicione o primeiro nome']  },
     fullName: String,
-    neighborhoodsIdentity: Array,
-    scope: Array,
+    genre: { type: String, required: [true, 'adicione o gênero'] },
     yearOfBirth: Number,
-    genre: String,
     skinColor: String,
     levelOfSchooling: String,
+
+    // Mandate Datas
+    campaignCnpj: { type: Number, required: [true, 'adicione o CNPJ de campanha'] , unique: [true, 'Este CNPJ de campanha já foi cadastrado']},
+    inActivity: { type: Boolean, required: [true, 'a pessoa a ser cadastrada está em atividade?'] },
+    neighborhoodsIdentity: Array,
+    scope: Array,
     lastCampaignNumber: String,
     lastCampaignVotes: Number,
     lastCampaignParty: String,
     governmentPosition: String,
     victoryYears: Array,
-    inActivity: Boolean,
-    actualRemuneration: Number,
+
+    // Financial Datas
+    actualRemuneration: { type: String, required: [true, 'adicione a remuneração atual'] },
     mandateRemuneration: Number,
     lastCampaignExpenses: Number,
     campaignExpensesLink: String,
+
+    // Social Media
     instagram: String,
     facebook: String,
-    email: String,
+
+    // Contacts
+    email: { type: String, required: [true, 'adicione e-mail para contato'] },
     othersContacts: String,
+
+    // Others
     observations: String,
 },{
     versionKey: false
