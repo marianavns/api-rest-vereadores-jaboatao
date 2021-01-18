@@ -2,8 +2,8 @@ const mongoose = require('mongoose')
 
 const ideasSchema = new mongoose.Schema({
     scope: {
-        type: Array,
-        enum: ['educação', 'saneamento', 'saneamento básico', 'saúde', 'habitação', 'outros']
+        type: String,
+        enum: ['educação', 'saneamento', 'saúde', 'habitação', 'outros'],
     },
     idea: {
         type: String,
