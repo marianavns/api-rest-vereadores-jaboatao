@@ -4,10 +4,11 @@ const councilorsSchema = new mongoose.Schema({
     // Personal Datas
     campaignName: { 
         type: String, 
-        required: [true, 'adicione o nome de campanha do(a) vereador(a)'] 
+        required: [true, 'adicione o nome de campanha do(a) vereador(a)']
     },
     firstName: {
-        type: String, required: [true, 'adicione o primeiro nome do(a) vereador(a)']  
+        type: String, 
+        required: [true, 'adicione o primeiro nome do(a) vereador(a)'],
     },
     fullName: String,
     genre: { 
@@ -21,27 +22,26 @@ const councilorsSchema = new mongoose.Schema({
     // Mandate Datas
     campaignCnpj: { 
         type: Number, 
-        required: [true, 'adicione o CNPJ da campanha do(a) vereador(a)'], 
-        unique: [true, 'Este CNPJ de campanha já foi cadastrado.']
+        // required: [true, 'adicione o CNPJ da campanha do(a) vereador(a)'], 
     },
+    lastCampaignNumber: String,
     inActivity: { 
         type: Boolean, 
         required: [true, 'o(a) vereador(a) a ser cadastrado(a) está em atividade?'] 
     },
-    neighborhoodsIdentity: Array,
-    scope: Array,
-    lastCampaignNumber: String,
     lastCampaignVotes: Number,
     lastCampaignParty: String,
     governmentPosition: String,
     victoryYears: Array,
+    neighborhoodsIdentity: Array,
+    scope: Array,
 
     // Financial Datas
-    actualRemuneration: { 
+    monthlyBasisRemuneration : { 
         type: String, 
         required: [true, 'adicione a remuneração atual do(a) vereador(a)'] 
     },
-    mandateRemuneration: Number,
+    totalRemuneration: Number,
     lastCampaignExpenses: Number,
     campaignExpensesLink: String,
 
@@ -52,7 +52,7 @@ const councilorsSchema = new mongoose.Schema({
     // Contacts
     email: { 
         type: String, 
-        required: [true, 'adicione e-mail para contato do(a) vereador(a)'] 
+        // required: [true, 'adicione e-mail para contato do(a) vereador(a)'] 
     },
     othersContacts: String,
 
